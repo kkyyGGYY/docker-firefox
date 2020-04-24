@@ -1,7 +1,6 @@
 from ubuntu:latest
 
-RUN apt-get update && apt-get install -y
-RUN apt-get update && apt-get install -y python-pip python-dev build-essential
+RUN apt-get update && apt-get install -y build-essential
 
 WORKDIR /app
 COPY ./requirements.txt /app
