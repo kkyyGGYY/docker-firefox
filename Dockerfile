@@ -6,7 +6,5 @@ WORKDIR /app
 COPY ./requirements.txt /app
 COPY ./app.py /app
 
-RUN pip install flask
-
 ENTRYPOINT ["python"]
 CMD ["app.py"]
