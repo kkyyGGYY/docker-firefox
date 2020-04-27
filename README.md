@@ -1,4 +1,3 @@
-docker-firefox
+docker-build
 ==============
-
-Firefox over Docker via VNC
+build
