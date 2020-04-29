@@ -1,10 +1,15 @@
-from ubuntu:latest
+# This dockerfile uses the ubuntu image
+# VERSION 2 - EDITION 1
+# Author: docker_user
+# Command format: Instruction [arguments / command] ..
+ 
+FROM ubuntu
 
-RUN apt-get update && apt-get install -y build-essential
+ 
+RUN echo "deb http://archive.ubuntu.com/ubuntu/ raring main universe" >> /etc/apt/sources.list
+RUN apt-get update && apt-get install -y nginx
+RUN echo "\ndaemon off;" >> /etc/nginx/nginx.conf
+ 
 
-WORKDIR /app
-COPY ./requirements.txt /app
-COPY ./app.py /app
+CMD /usr/sbin/nginx
 
-ENTRYPOINT ["python"]
-CMD ["app.py"]
