@@ -2,7 +2,7 @@ from ubuntu:latest
 
 RUN apt-get update && apt-get install -y build-essential
 
-WORKDIR /app
+WORKDIR /home
 COPY ./requirements.txt /app
 COPY ./app.py /app
 
